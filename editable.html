@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HEP !</title>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Silex v2.2.5">
+    <!-- leave this for stats -->
+    <script type="text/javascript" src="//preprod.silex.me/static/2.5/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="//preprod.silex.me/static/2.5/jquery-ui.js" data-silex-static=""></script>
+    <script type="text/javascript" src="//preprod.silex.me/static/2.5/jquery.ui.touch-punch.min.js" data-silex-static=""></script>
+    <script type="text/javascript" src="//preprod.silex.me/static/2.5/pageable.js" data-silex-static=""></script>
+    <script type="text/javascript" src="//preprod.silex.me/static/2.5/front-end.js" data-silex-static=""></script>
+    <!-- Normalize -->
+    <link href="//preprod.silex.me/static/2.5/normalize.css" rel="stylesheet" data-silex-static="">
+    <!-- Silex style -->
+    <link href="//preprod.silex.me/static/2.5/front-end.css" rel="stylesheet" data-silex-static="">
+
+    <style type="text/css" class="silex-style">
+        @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300,700');
+        /*
+        	Here are the CSS styles of your website.
+
+        	Bellow are some examples, like the styles which you can apply to your text in the text editor.
+
+        	See this page for help on CSS
+        	https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started
+
+        	In the advanced "Apollo" mode, you will be able to add CSS classes to Silex elements,
+        	and then apply a CSS style to it here.
+        */
+
+        /* define a style for Title, Headings and Normal texts */
+        .title,
+        .heading1,
+        .heading2,
+
+        .mouse{
+        cursor:  pointer;
+        }
+        .line-1 {
+         Line-Height:40%!important;
+        }
+        .menu-right {
+            right:5%!important;
+            z-index:1000!important;
+        }
+        .menu-left {
+            left:5%!important;
+            z-index:1000!important;
+        }
+        .text-element a:hover {
+        font-family: 'Open Sans', sans-serif;
+          font-size:95%;
+        font-weight: bold!important;
+          color: white !important;
+          background-color:#1bd6ff !important;
+           text-decoration: none;
+        }
+        .text-element a {
+        font-family: 'Open Sans', sans-serif;
+          font-size:95%;
+        font-weight: normal!important;
+            color: #1bd6ff !important;
+          background-color:white !important;
+        }
+        .none {
+            text-decoration:none !important;
+        }
+        .nav {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.2em;
+            margin: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            clear: both;
+        }
+        .t2 {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6em;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-weight: 300 !important;
+        }
+        .heading1 .heading2 {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 50% !important;
+            margin: 0px;
+            margin-bottom: 0px !important;
+            padding: 0px;
+            clear: both;
+        }
+        .heading3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size:100px ;
+            color:white ;
+            text-align: center;
+            line-height: 1.6em;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-weight: 800;
+        }
+        .normal {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            clear: both;
+        }
+        /* title style */
+        .title {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 100% !important;
+            margin: 0px;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: 300;
+        }
+        .justifier {
+            text-align: justify !important;
+        }
+        .center-content{
+            z-index:1!important;
+            width:800px !important;
+            margin-left:-400px !important;
+            left:50% !important;
+            }
+        .full-width{
+            width:100% !important;
+            left: 0px !important;
+        }
+        .rotate_90{
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* Internet Explorer */
+        -moz-transform:rotate(45deg); /* Firefox */
+        -webkit-transform:rotate(45deg); /* Safari et Chrome */
+        -o-transform:rotate(45deg); /* Opera */
+        }
+        .shadow{
+            box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+        .text-shadow{
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+        }
+        .link-menu {
+          background-color: rgba(255, 255, 255, 0) !important;
+            /* Firefox */
+            -moz-transition: all 0.5s ease-out;
+            /* WebKit */
+            -webkit-transition: all 0.5s ease-out;
+            /* Opera */
+            -o-transition: all 0.5s ease-out;
+            /* Standard */
+            transition: all 0.5s ease-out;
+        }
+        .link-menu:hover {
+          background-color: rgba(255, 255, 255, 0.3) !important;
+            /* Firefox */
+            -moz-transition: all 0.1s ease-in;
+            /* WebKit */
+            -webkit-transition: all 0.1s ease-in;
+            /* Opera */
+            -o-transition: all 0.1s ease-in;
+            /* Standard */
+            transition: all 0.1s ease-in;
+        }
+        .btn_link{
+            padding-top: 10px !important;
+        }
+        .link-button {
+            background-color:#1bd6ff !important;
+            /* Firefox */
+            -moz-transition: all 0.5s ease;
+            /* WebKit */
+            -webkit-transition: all 0.5s ease;
+            /* Opera */
+            -o-transition: all 0.5s ease;
+            /* Standard */
+            transition: all 0.5s ease;
+        }
+        .link-button:hover {
+            background-color: #baf5ff !important;
+            /* Firefox */
+            -moz-transition: all 0.3s ease;
+            /* WebKit */
+            -webkit-transition: all 0.3s ease;
+            /* Opera */
+            -o-transition: all 0.3s ease;
+            /* Standard */
+            transition: all 0.3s ease;
+              text-decoration: none!important;
+        }
+
+        /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+               > PARALAXE
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        .parallaxe-slow-up, .parallaxe-normal-up, .parallaxe-quick-up, .parallaxe-normal-down, .parallaxe-slow-down, .parallaxe-quick-down, .parallaxe-hyper-up, .parallaxe-hyper-down {
+            background-attachment: scroll !important;
+            background-position: 0px 0px;
+            background-repeat: no-repeat no-repeat;
+        }
+        .silex-runtime .fixed-bg {
+            background-attachment: fixed !important;
+            background-size: cover !important;
+        }
+        .parallaxe-bg {
+           width: 100% !important;
+           z-index:0!important;
+        }
+        .full-ground{
+            z-index:2000!important;
+        }
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        .fixed-menu{
+            position: fixed !important;
+            top: 0 !important;
+            z-index: 1000;
+            border-radius: 0 !important;
+        }
+        .text-fx{
+               text-shadow: 1px 1px #1bd6ff,
+                        2px 2px #1bd6ff,
+                        3px 3px #1bd6ff,
+                        4px 4px #1bd6ff,
+                        5px 5px #1bd6ff,
+                        6px 6px #1bd6ff,
+                        7px 7px #1bd6ff,
+                        8px 8px #1bd6ff;
+        }
+        .text-fx3{
+               text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8) !important;
+        }
+        .paged-element-hidden.animated{
+            animation-name: none !important;
+        }
+        .footer{
+            top:100%!important;
+        }
+    </style>
+    <script type="text/javascript" class="silex-script">
+        document.write('<link href="css/hover-min.css" rel="stylesheet">');
+        document.write('<link href="css/animate.css" rel="stylesheet">');
+
+        /////////////////////////////////////////////     PARALLAXE
+
+        $(document).ready(function(){
+
+            function applyParallaxe(element, inertia) {
+                //.parallax(xPosition, speedFactor, outerHeight) options:
+                //xPosition - Horizontal position of the element
+                //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+                //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+                var xPosition = $(element).position().left + 'px';
+                xPosition = '0';
+
+                $(element).parallax(xPosition, inertia, false);
+            }
+            // move parallaxe-bg elements to the background
+            $('.parallaxe-bg').each(function () {
+              var oldPos = $(this).offset();
+              // take children out of the element
+              $(this).children('.editable-style').each(function () {
+                var oldPos = $(this).offset();
+
+                $(this).appendTo(this.parentNode.parentNode);
+                $(this).offset(oldPos);
+              });
+              // move to the bg
+              $(this).appendTo($('body'));
+              // keep initial Y position
+              oldPos.left = 0;
+              $(this).offset(oldPos);
+            });
+
+            // parallaxe-slow-up, parallaxe-normal-up, paralax-quick, paralax-very-quick
+            $('.parallaxe-slow-up').each(function () {
+                applyParallaxe(this, 0.3);
+            });
+            $('.parallaxe-slow-down').each(function () {
+                applyParallaxe(this, -0.3);
+            });
+            $('.parallaxe-normal-down').each(function () {
+                applyParallaxe(this, -0.7);
+            });
+            $('.parallaxe-normal-up').each(function () {
+                applyParallaxe(this, 0);
+            });
+            $('.parallaxe-quick-up').each(function () {
+                applyParallaxe(this, 3);
+            });
+            $('.parallaxe-quick-down').each(function () {
+                applyParallaxe(this, -3);
+            });
+            $('.parallaxe-hyper-up').each(function () {
+                applyParallaxe(this, 5);
+            });
+            $('.parallaxe-hyper-down').each(function () {
+                applyParallaxe(this, -5);
+            });
+        })
+        // load paralaxe scripts
+        document.write('<sc'+'ript type="text/javascript" src="js/jquery.parallax-1.1.3.js"></sc'+'ript>');
+        document.write('<sc'+'ript type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></sc'+'ript>');
+        document.write('<sc'+'ript type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></sc'+'ript>');
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // ANCHORS AND SCROLLING
+
+        function newAnchorLink(link, pos){
+            $('a[href="http:#'+link+'"]').click(function(){
+                $('html, body').animate({
+                    scrollTop: pos - 60
+                }, 1800);
+                return false;
+            });
+        }
+        ////////////////////////////////////
+        var initialMenuPos = 0;
+        document.onscroll = function(e){
+            //console.log($(document).scrollTop(), $(".fixed-menu-when-hidden").offset().top);
+            if ($(document).scrollTop() > $(".fixed-menu-when-hidden").offset().top + 0){
+                initialMenuPos = $(".fixed-menu-when-hidden").offset().top;
+                $(".fixed-menu-when-hidden").addClass("fixed-menu");
+                console.log('yes');
+            }
+            else if ($(document).scrollTop() < initialMenuPos -10){
+                $(".fixed-menu-when-hidden").removeClass("fixed-menu");
+                console.log('no');
+            }
+        }
+
+
+
+        ////////////////////////////////////  BOUTON HAUT DE PAGE
+            $(function(){
+                $('.btn_accueil').click(function() {
+                  $('html,body').animate({scrollTop: 0}, 1800);
+                });
+            });
+                $(function(){
+                $('.btn_01').click(function() {
+                  $('html,body').animate({scrollTop: 1080}, 1800);
+                });
+            });
+                    $(function(){
+                $('.btn_02').click(function() {
+                  $('html,body').animate({scrollTop: 2160}, 1800);
+                });
+            });
+                    $(function(){
+                $('.btn_03').click(function() {
+                  $('html,body').animate({scrollTop: 3240}, 1800);
+                });
+            });
+                    $(function(){
+                $('.btn_04').click(function() {
+                  $('html,body').animate({scrollTop: 4320}, 1800);
+                });
+            });
+                    $(function(){
+                $('.btn_05').click(function() {
+                  $('html,body').animate({scrollTop: 5400}, 1800);
+                });
+            });
+    </script>
+    <meta name="publicationPath" content="http://preprod.silex.me/api/1.0/dropbox/exec/put///TEMPLATE/Template-HEP%20templatematic/">
+    <style class="silex-inline-styles" type="text/css">
+        .silex-id-1439284273816-44 {
+            cursor: auto; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284273715-43 {
+            left: 56px; 
+            width: 834px; 
+            height: 6481px; 
+            position: absolute; 
+            background-color: transparent; 
+            top: -5px; 
+        }
+        .silex-id-1439284273614-42 {
+            height: 1080px; 
+            width: 100px; 
+            position: absolute; 
+            top: 0px; 
+            background-image: url('assets/BG-01.jpg'); 
+            background-color: rgba(27, 214, 255, 0.439216); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273513-41 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 2160px; 
+            background-image: url('../..///TEMPLATE/Template-HEP/assets/BG-02.jpg'); 
+            background-color: rgb(255, 255, 255); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273412-40 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 4320px; 
+            background-image: url('assets/BG-03.jpg'); 
+            background-color: rgb(255, 255, 255); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273311-39 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 1080px; 
+            left: 154px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284273210-38 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 292px; 
+            background-color: rgb(255, 255, 255); 
+            left: 0px; 
+        }
+        .silex-id-1439284273109-37 {
+            position: absolute; 
+            height: 225px; 
+            width: 323px; 
+            top: 286px; 
+            left: 408px; 
+            background-image: url('../..//TEMPLATE/Template-HEP/assets/vignette-1.jpg'); 
+            background-color: transparent; 
+            background-size: contain; 
+        }
+        .silex-id-1439284273008-36 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 563px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284272907-35 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 624px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272806-34 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 220px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272705-33 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 3240px; 
+            left: 17px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272604-32 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 272px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272503-31 {
+            position: absolute; 
+            height: 251px; 
+            width: 419px; 
+            top: 266px; 
+            left: 377px; 
+            background-image: url('../..///////TEMPLATE/Template-HEP/assets/vignette-2.jpg'); 
+            background-color: transparent; 
+            background-size: contain; 
+        }
+        .silex-id-1439284272402-30 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 530px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284272300-29 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 604px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272200-28 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 200px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272098-27 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 5400px; 
+            left: 0px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271997-26 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 272px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284271896-25 {
+            position: absolute; 
+            height: 268px; 
+            width: 419px; 
+            top: 237px; 
+            left: 377px; 
+            background-image: url('assets/vignette-3.jpg'); 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284271796-24 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 530px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284271695-23 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 604px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284271593-22 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 200px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271492-21 {
+            position: absolute; 
+            height: 200px; 
+            width: 100px; 
+            top: 6775px; 
+            left: 0px; 
+            background-color: rgb(27, 214, 255); 
+        }
+        .silex-id-1439284271391-20 {
+            position: absolute; 
+            height: 147px; 
+            width: 100px; 
+            top: 29px; 
+            left: 17px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271289-19 {
+            position: absolute; 
+            height: 126px; 
+            width: 571px; 
+            top: 10px; 
+            left: 10px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271188-18 {
+            position: absolute; 
+            height: 126px; 
+            width: 161px; 
+            top: 10px; 
+            left: 630px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271087-17 {
+            z-index: 10; 
+            position: absolute; 
+            height: 57px; 
+            width: 520px; 
+            left: 1403px; 
+            top: 1080px; 
+            background-color: rgb(27, 214, 255); 
+        }
+        .silex-id-1439284270986-16 {
+            height: 67px; 
+            width: 611px; 
+            position: absolute; 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284270885-15 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 0px; 
+            background-size: auto; 
+        }
+        .silex-id-1439284270784-14 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 102px; 
+            background-color: rgba(255, 255, 255, 0.729412); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270683-13 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 204px; 
+            background-color: rgba(255, 255, 255, 0.513726); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270582-12 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 306px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270481-11 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 408px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270380-10 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 510px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270279-9 {
+            position: absolute; 
+            height: 101px; 
+            width: 149px; 
+            top: -24px; 
+            left: 47px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284270178-8 {
+            position: absolute; 
+            height: 367px; 
+            width: 100px; 
+            top: 2360px; 
+            left: 195px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284270077-7 {
+            position: absolute; 
+            height: 233px; 
+            width: 721px; 
+            top: 22px; 
+            left: 16px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269976-6 {
+            position: absolute; 
+            height: 30px; 
+            width: 130px; 
+            top: 195px; 
+            left: 584px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284269875-5 {
+            position: absolute; 
+            height: 273px; 
+            width: 100px; 
+            top: 4500px; 
+            left: 115px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269774-4 {
+            position: absolute; 
+            height: 233px; 
+            width: 721px; 
+            top: 22px; 
+            left: 16px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269673-3 {
+            position: absolute; 
+            height: 30px; 
+            width: 130px; 
+            top: 195px; 
+            left: 584px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284269571-2 {
+            height: 330px; 
+            width: 800px; 
+            top: 2.3%; 
+            left: 195px; 
+            position: absolute; 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284269470-1 {
+            z-index: 300; 
+            position: absolute; 
+            height: 192px; 
+            top: 43px; 
+            width: 760px; 
+            left: 20px; 
+            border-top-color: rgb(255, 255, 255); 
+            border-right-color: rgb(255, 255, 255); 
+            border-bottom-color: rgb(255, 255, 255); 
+            border-left-color: rgb(255, 255, 255); 
+            border-image-source: none; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269356-0 {
+            line-height: 1em; 
+            position: absolute; 
+            height: 49px; 
+            width: 204px; 
+            top: 236px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            left: 304px; 
+            background-color: rgb(103, 208, 176); 
+            background-size: auto; 
+        }
+    </style>
+
+
+
+
+
+
+
+    <style id="current-page-style">
+        .page-home{display:inherit; }
+    </style>
+    <!-- Silex HEAD tag do not remove -->
+    <!-- End of Silex HEAD tag do not remove -->
+</head>
+
+<body class="silex-id-1439284273816-44 silex-runtime" data-silex-type="container" data-silex-id="silex-id-1439284273816-44">
+    <a id="page-home" data-silex-type="page" class="page-element">Home</a>
+
+
+
+    <div class="editable-style container-element background prevent-draggable silex-id-1439284273715-43" data-silex-type="container" data-silex-id="silex-id-1439284273715-43">
+        <div class="editable-style container-element paged-element page-home parallaxe-slow-up fixed-bg parallaxe-bg silex-id-1439284273614-42" data-silex-type="container" data-silex-id="silex-id-1439284273614-42">
+            <div data-silex-type="container" class="editable-style container-element parallaxe-slow-up fixed-bg parallaxe-bg silex-id-1439284273513-41" data-silex-id="silex-id-1439284273513-41"></div>
+            <div data-silex-type="container" class="editable-style container-element parallaxe-slow-up fixed-bg parallaxe-bg silex-id-1439284273412-40" data-silex-id="silex-id-1439284273412-40"></div>
+        </div>
+        <div data-silex-type="container" class="editable-style container-element center-content silex-id-1439284273311-39" data-silex-id="silex-id-1439284273311-39">
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284273210-38" data-silex-id="silex-id-1439284273210-38">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <br>
+                    </header>
+                    <p class="normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue
+                        quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt
+                        hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.</p>
+                </div>
+            </div>
+            <div data-silex-type="container" class="editable-style container-element editable silex-id-1439284273109-37" data-silex-id="silex-id-1439284273109-37"></div>
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284273008-36" data-silex-id="silex-id-1439284273008-36">
+                <div class="silex-element-content normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet.
+                    <br>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element shadow link-button btn_link btn_02 mouse silex-id-1439284272907-35" data-silex-id="silex-id-1439284272907-35">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><span style="color: rgb(255, 255, 255);">SUIVANT</span>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element page-home paged-element silex-id-1439284272806-34" data-silex-id="silex-id-1439284272806-34">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <header class="title"><font size="7"><span style="line-height: 48px;">1: Titre de la première partie</span></font>
+                        </header>
+                        <div><font class="title" style="line-height: 48px;" size="7"><br></font>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div data-silex-type="container" class="editable-style container-element center-content page-home paged-element silex-id-1439284272705-33" data-silex-id="silex-id-1439284272705-33">
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284272604-32" data-silex-id="silex-id-1439284272604-32">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <br>
+                    </header>
+                    <p class="normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue
+                        quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt
+                        hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.</p>
+                </div>
+            </div>
+            <div data-silex-type="container" class="editable-style container-element editable silex-id-1439284272503-31" data-silex-id="silex-id-1439284272503-31"></div>
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284272402-30" data-silex-id="silex-id-1439284272402-30">
+                <div class="silex-element-content normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet.
+                    <br>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element shadow link-button btn_link btn_04 mouse silex-id-1439284272300-29" data-silex-id="silex-id-1439284272300-29">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><span style="color: rgb(255, 255, 255); background-color: transparent;">SUIVANT</span>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element page-home paged-element silex-id-1439284272200-28" data-silex-id="silex-id-1439284272200-28">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <header class="title" style="line-height: 15px;">
+                            <header class="title" style="line-height: 15px;">
+                                <header class="title" style="line-height: 15px;"><font size="7"><span style="line-height: 48px;">3: Titre de la troixième partie</span></font>
+                                </header>
+                                <div><font size="7"><span style="line-height: 48px;"><br></span></font>
+                                </div>
+                            </header>
+                        </header>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div data-silex-type="container" class="editable-style container-element center-content page-home paged-element silex-id-1439284272098-27" data-silex-id="silex-id-1439284272098-27">
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284271997-26" data-silex-id="silex-id-1439284271997-26">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <br>
+                    </header>
+                    <p class="normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue
+                        quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt
+                        hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra.</p>
+                </div>
+            </div>
+            <div data-silex-type="container" class="editable-style container-element editable silex-id-1439284271896-25" data-silex-id="silex-id-1439284271896-25"></div>
+            <div data-silex-type="text" class="editable-style text-element silex-id-1439284271796-24" data-silex-id="silex-id-1439284271796-24">
+                <div class="silex-element-content normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet.
+                    <br>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element shadow link-button btn_link btn_accueil mouse silex-id-1439284271695-23" data-silex-id="silex-id-1439284271695-23">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><span style="color: rgb(255, 255, 255); background-color: transparent;">DEBUT</span>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element page-home paged-element silex-id-1439284271593-22" data-silex-id="silex-id-1439284271593-22">
+                <div class="silex-element-content normal">
+                    <header class="title">
+                        <header class="title" style="line-height: 15px;">
+                            <header class="title" style="line-height: 15px;">
+                                <header class="title" style="line-height: 15px;"><font size="7"><span style="line-height: 48px;">5: Titre de la cinquième partie</span></font>
+                                </header>
+                                <div><font size="7"><span style="line-height: 48px;"><br></span></font>
+                                </div>
+                            </header>
+                        </header>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div data-silex-type="container" class="editable-style container-element page-home paged-element fixed-bg parallaxe-bg footer silex-id-1439284271492-21" data-silex-id="silex-id-1439284271492-21">
+            <div data-silex-type="container" class="editable-style container-element center-content silex-id-1439284271391-20" data-silex-id="silex-id-1439284271391-20">
+                <div data-silex-type="text" class="editable-style text-element silex-id-1439284271289-19" data-silex-id="silex-id-1439284271289-19">
+                    <div class="silex-element-content normal">
+                        <p class="normal"><font color="#ffffff" size="1">Website by <a href="http://leofrancia.fr/">&nbsp;Léo Francia&nbsp;</a></font>
+                        </p><font color="#ffffff" size="1">This website is  powered by <a href="http://www.silex.me/">&nbsp;Silex v.2 </a>&nbsp;free website builder for designers</font>
+                        <div><b style="text-align: center;"><font color="#ffffff" size="1"><br></font></b>
+                        </div><font color="#ffffff" size="1">Pictures credit by&nbsp;<a href="http://en.wikipedia.org/wiki/Drip_brew#mediaviewer/File:Drip_Coffee_Bangkok.jpg"> Takeaway </a>&nbsp;/ <a href="https://www.flickr.com/photos/jordanlloyd/5314557017/">&nbsp;</a><a href="https://www.flickr.com/photos/jordanlloyd/5314557017/">Jordan Lloyd </a>&nbsp;/ <a href="https://www.flickr.com/photos/zigazou76/8614734058/">&nbsp;Frédéric BISSON </a>&nbsp;/ <a href="https://www.flickr.com/photos/anieto2k/6729761041/">&nbsp;Andrés Nieto Porras </a>&nbsp;/ <a href="https://www.flickr.com/photos/pokpok/15005443847/">&nbsp;Christian Kadluba&nbsp;</a></font>
+                    </div>
+                </div>
+                <div data-silex-type="text" class="editable-style text-element silex-id-1439284271188-18" data-silex-id="silex-id-1439284271188-18">
+                    <div class="silex-element-content normal">
+                        <div style="text-align: right;"><a href="https://twitter.com/" style="font-size: x-small;">&nbsp;TWITTER&nbsp;</a>
+                        </div><font size="1"><div style="text-align: right;"><br></div><div style="text-align: right;"><a href="https://fr-fr.facebook.com/" style="font-size: x-small;">&nbsp;FACEBOOK&nbsp;</a></div><div style="text-align: right;"><br></div><div style="text-align: right;"><a href="https://www.youtube.com" style="font-size: x-small;">&nbsp;YOUTUBE&nbsp;</a></div><div style="text-align: right;"><br></div><div style="text-align: right;"><a href="https://fr.linkedin.com/" style="font-size: x-small;">&nbsp;LINKEDIN&nbsp;</a></div></font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-silex-type="container" class="editable-style container-element full-width full-ground top fixed-menu-when-hidden silex-id-1439284271087-17" data-silex-id="silex-id-1439284271087-17">
+        <div class="editable-style container-element menu-right silex-id-1439284270986-16" data-silex-type="container" data-silex-id="silex-id-1439284270986-16">
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_accueil mouse silex-id-1439284270885-15" data-silex-id="silex-id-1439284270885-15">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">ACCUEIL</font>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_01 mouse silex-id-1439284270784-14" data-silex-id="silex-id-1439284270784-14">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">PAGE 1</font>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_02 mouse silex-id-1439284270683-13" data-silex-id="silex-id-1439284270683-13">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">PAGE 2</font>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_03 mouse silex-id-1439284270582-12" data-silex-id="silex-id-1439284270582-12">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">PAGE 3</font>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_04 mouse silex-id-1439284270481-11" data-silex-id="silex-id-1439284270481-11">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">PAGE 4</font>
+                    </div>
+                </div>
+            </div>
+            <div data-silex-type="text" class="editable-style text-element link-menu btn_05 mouse silex-id-1439284270380-10" data-silex-id="silex-id-1439284270380-10">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><font color="#ffffff"><br></font>
+                    </div>
+                    <div style="text-align: center;"><font color="#ffffff">PAGE 5</font>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-silex-type="text" class="editable-style text-element menu-left btn_accueil mouse silex-id-1439284270279-9" data-silex-id="silex-id-1439284270279-9">
+            <div class="silex-element-content normal">
+                <h2><span style="color: rgb(255, 255, 255);"><font size="7">HEP<i>!</i></font></span></h2>
+            </div>
+        </div>
+    </div>
+    <div data-silex-type="container" class="editable-style container-element center-content silex-id-1439284270178-8" data-silex-id="silex-id-1439284270178-8">
+        <div data-silex-type="text" class="editable-style text-element text-shadow silex-id-1439284270077-7" data-silex-id="silex-id-1439284270077-7">
+            <div class="silex-element-content normal">
+                <h1 class="heading1" style="line-height: 12px;"><font color="#ffffff"><span class="heading1"><font size="5"><br></font></span><span class="heading1"><font size="6">2: Titre de la deuxième partie</font></span></font></h1>
+                <header><span style="color: rgb(255, 255, 255); line-height: 15px;"><font class="title" style="line-height: 18px;" size="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra. Phasellus molestie aliquet sagittis.</font></span>
+                </header>
+            </div>
+        </div>
+        <div data-silex-type="text" class="editable-style text-element shadow link-button btn_link btn_03 mouse silex-id-1439284269976-6" data-silex-id="silex-id-1439284269976-6">
+            <div class="silex-element-content normal">
+                <div style="text-align: center;"><span style="background-color: transparent;"><font color="#ffffff">SUIVANT</font></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-silex-type="container" class="editable-style container-element center-content page-home paged-element silex-id-1439284269875-5" data-silex-id="silex-id-1439284269875-5">
+        <div data-silex-type="text" class="editable-style text-element text-shadow silex-id-1439284269774-4" data-silex-id="silex-id-1439284269774-4">
+            <div class="silex-element-content normal">
+                <h1 class="heading1" style="line-height: 12px;"><font color="#ffffff"><span class="heading1"><font size="5"><br></font></span><span class="heading1"><font size="6">4: Titre de la quatrième partie</font></span></font></h1>
+                <header><span style="color: rgb(255, 255, 255); line-height: 15px;"><font class="title" style="line-height: 18px;" size="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis iaculis venenatis. Curabitur aliquet nulla vitae pretium fringilla. Duis tincidunt hendrerit laoreet. Cras rhoncus efficitur volutpat. Etiam ultricies nunc congue quam pretium ullamcorper quis vitae nisi. Fusce laoreet erat a ultrices pharetra. Phasellus molestie aliquet sagittis.</font></span>
+                </header>
+            </div>
+        </div>
+        <div data-silex-type="text" class="editable-style text-element shadow link-button btn_link btn_05 mouse silex-id-1439284269673-3" data-silex-id="silex-id-1439284269673-3">
+            <div class="silex-element-content normal">
+                <div style="text-align: center;"><span style="background-color: transparent;"><font color="#ffffff">SUIVANT</font></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="editable-style container-element center-content silex-id-1439284269571-2" data-silex-type="container" data-silex-id="silex-id-1439284269571-2">
+        <div data-silex-type="text" class="editable-style text-element text-fx animated tada silex-id-1439284269470-1" data-silex-id="silex-id-1439284269470-1">
+            <div class="silex-element-content normal">
+                <br>
+                <h3 class="heading3">HEP<i>!</i> CAFÉ</h3>
+                <h2><br></h2>
+                <h3><br></h3>
+            </div>
+        </div>
+        <div data-silex-type="text" class="editable-style text-element shadow link-button btn_01 mouse silex-id-1439284269356-0" data-silex-id="silex-id-1439284269356-0">
+            <div class="silex-element-content normal">
+                <div style="text-align: right;"><span style="color: rgb(255, 255, 255); font-size: medium; text-align: center;"><br></span>
+                </div><span style="color: rgb(255, 255, 255); font-size: medium; text-align: center;"><div style="text-align: center;">Démarrer</div></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="undefined"></div>
+</body>
+
+</html>
