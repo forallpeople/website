@@ -1,0 +1,632 @@
+
+        @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300,700');
+        /*
+        	Here are the CSS styles of your website.
+
+        	Bellow are some examples, like the styles which you can apply to your text in the text editor.
+
+        	See this page for help on CSS
+        	https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started
+
+        	In the advanced "Apollo" mode, you will be able to add CSS classes to Silex elements,
+        	and then apply a CSS style to it here.
+        */
+
+        /* define a style for Title, Headings and Normal texts */
+        .title,
+        .heading1,
+        .heading2,
+
+        .mouse{
+        cursor:  pointer;
+        }
+        .line-1 {
+         Line-Height:40%!important;
+        }
+        .menu-right {
+            right:5%!important;
+            z-index:1000!important;
+        }
+        .menu-left {
+            left:5%!important;
+            z-index:1000!important;
+        }
+        .text-element a:hover {
+        font-family: 'Open Sans', sans-serif;
+          font-size:95%;
+        font-weight: bold!important;
+          color: white !important;
+          background-color:#1bd6ff !important;
+           text-decoration: none;
+        }
+        .text-element a {
+        font-family: 'Open Sans', sans-serif;
+          font-size:95%;
+        font-weight: normal!important;
+            color: #1bd6ff !important;
+          background-color:white !important;
+        }
+        .none {
+            text-decoration:none !important;
+        }
+        .nav {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.2em;
+            margin: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            clear: both;
+        }
+        .t2 {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6em;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-weight: 300 !important;
+        }
+        .heading1 .heading2 {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 50% !important;
+            margin: 0px;
+            margin-bottom: 0px !important;
+            padding: 0px;
+            clear: both;
+        }
+        .heading3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size:100px ;
+            color:white ;
+            text-align: center;
+            line-height: 1.6em;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-weight: 800;
+        }
+        .normal {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            clear: both;
+        }
+        /* title style */
+        .title {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 100% !important;
+            margin: 0px;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: 300;
+        }
+        .justifier {
+            text-align: justify !important;
+        }
+        .center-content{
+            z-index:1!important;
+            width:800px !important;
+            margin-left:-400px !important;
+            left:50% !important;
+            }
+        .full-width{
+            width:100% !important;
+            left: 0px !important;
+        }
+        .rotate_90{
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* Internet Explorer */
+        -moz-transform:rotate(45deg); /* Firefox */
+        -webkit-transform:rotate(45deg); /* Safari et Chrome */
+        -o-transform:rotate(45deg); /* Opera */
+        }
+        .shadow{
+            box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+        .text-shadow{
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+        }
+        .link-menu {
+          background-color: rgba(255, 255, 255, 0) !important;
+            /* Firefox */
+            -moz-transition: all 0.5s ease-out;
+            /* WebKit */
+            -webkit-transition: all 0.5s ease-out;
+            /* Opera */
+            -o-transition: all 0.5s ease-out;
+            /* Standard */
+            transition: all 0.5s ease-out;
+        }
+        .link-menu:hover {
+          background-color: rgba(255, 255, 255, 0.3) !important;
+            /* Firefox */
+            -moz-transition: all 0.1s ease-in;
+            /* WebKit */
+            -webkit-transition: all 0.1s ease-in;
+            /* Opera */
+            -o-transition: all 0.1s ease-in;
+            /* Standard */
+            transition: all 0.1s ease-in;
+        }
+        .btn_link{
+            padding-top: 10px !important;
+        }
+        .link-button {
+            background-color:#1bd6ff !important;
+            /* Firefox */
+            -moz-transition: all 0.5s ease;
+            /* WebKit */
+            -webkit-transition: all 0.5s ease;
+            /* Opera */
+            -o-transition: all 0.5s ease;
+            /* Standard */
+            transition: all 0.5s ease;
+        }
+        .link-button:hover {
+            background-color: #baf5ff !important;
+            /* Firefox */
+            -moz-transition: all 0.3s ease;
+            /* WebKit */
+            -webkit-transition: all 0.3s ease;
+            /* Opera */
+            -o-transition: all 0.3s ease;
+            /* Standard */
+            transition: all 0.3s ease;
+              text-decoration: none!important;
+        }
+
+        /*//////////////////////////////////////////////////////////////////////////////////////////////////////////
+               > PARALAXE
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        .parallaxe-slow-up, .parallaxe-normal-up, .parallaxe-quick-up, .parallaxe-normal-down, .parallaxe-slow-down, .parallaxe-quick-down, .parallaxe-hyper-up, .parallaxe-hyper-down {
+            background-attachment: scroll !important;
+            background-position: 0px 0px;
+            background-repeat: no-repeat no-repeat;
+        }
+        .silex-runtime .fixed-bg {
+            background-attachment: fixed !important;
+            background-size: cover !important;
+        }
+        .parallaxe-bg {
+           width: 100% !important;
+           z-index:0!important;
+        }
+        .full-ground{
+            z-index:2000!important;
+        }
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        .fixed-menu{
+            position: fixed !important;
+            top: 0 !important;
+            z-index: 1000;
+            border-radius: 0 !important;
+        }
+        .text-fx{
+               text-shadow: 1px 1px #1bd6ff,
+                        2px 2px #1bd6ff,
+                        3px 3px #1bd6ff,
+                        4px 4px #1bd6ff,
+                        5px 5px #1bd6ff,
+                        6px 6px #1bd6ff,
+                        7px 7px #1bd6ff,
+                        8px 8px #1bd6ff;
+        }
+        .text-fx3{
+               text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8) !important;
+        }
+        .paged-element-hidden.animated{
+            animation-name: none !important;
+        }
+        .footer{
+            top:100%!important;
+        }
+    
+        .silex-id-1439284273816-44 {
+            cursor: auto; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284273715-43 {
+            left: 56px; 
+            width: 834px; 
+            height: 6481px; 
+            position: absolute; 
+            background-color: transparent; 
+            top: -5px; 
+        }
+        .silex-id-1439284273614-42 {
+            height: 1080px; 
+            width: 100px; 
+            position: absolute; 
+            top: 0px; 
+            background-image: url('../assets/BG-01.jpg'); 
+            background-color: rgba(27, 214, 255, 0.439216); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273513-41 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 2160px; 
+            background-image: url('../assets/BG-02.jpg'); 
+            background-color: rgb(255, 255, 255); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273412-40 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 4320px; 
+            background-image: url('../assets/BG-03.jpg'); 
+            background-color: rgb(255, 255, 255); 
+            background-size: cover; 
+        }
+        .silex-id-1439284273311-39 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 1080px; 
+            left: 154px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284273210-38 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 292px; 
+            background-color: rgb(255, 255, 255); 
+            left: 0px; 
+        }
+        .silex-id-1439284273109-37 {
+            position: absolute; 
+            height: 225px; 
+            width: 323px; 
+            top: 286px; 
+            left: 408px; 
+            background-image: url('../assets/vignette-1.jpg'); 
+            background-color: transparent; 
+            background-size: contain; 
+        }
+        .silex-id-1439284273008-36 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 563px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284272907-35 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 624px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272806-34 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 220px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272705-33 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 3240px; 
+            left: 17px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272604-32 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 272px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272503-31 {
+            position: absolute; 
+            height: 251px; 
+            width: 419px; 
+            top: 266px; 
+            left: 377px; 
+            background-image: url('../assets/vignette-2.jpg'); 
+            background-color: transparent; 
+            background-size: contain; 
+        }
+        .silex-id-1439284272402-30 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 530px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284272300-29 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 604px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284272200-28 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 200px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284272098-27 {
+            position: absolute; 
+            height: 1080px; 
+            width: 100px; 
+            top: 5400px; 
+            left: 0px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271997-26 {
+            position: absolute; 
+            height: 218px; 
+            width: 376px; 
+            top: 272px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284271896-25 {
+            position: absolute; 
+            height: 268px; 
+            width: 419px; 
+            top: 237px; 
+            left: 377px; 
+            background-image: url('../assets/vignette-3.jpg'); 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284271796-24 {
+            position: absolute; 
+            height: 51px; 
+            width: 780px; 
+            top: 530px; 
+            left: 0px; 
+            background-color: rgb(255, 255, 255); 
+            background-size: auto; 
+        }
+        .silex-id-1439284271695-23 {
+            position: absolute; 
+            height: 30px; 
+            width: 133px; 
+            top: 604px; 
+            left: 627px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284271593-22 {
+            position: absolute; 
+            height: 72px; 
+            width: 795px; 
+            top: 200px; 
+            left: auto; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271492-21 {
+            position: absolute; 
+            height: 200px; 
+            width: 100px; 
+            top: 6775px; 
+            left: 0px; 
+            background-color: rgb(27, 214, 255); 
+        }
+        .silex-id-1439284271391-20 {
+            position: absolute; 
+            height: 147px; 
+            width: 100px; 
+            top: 29px; 
+            left: 17px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271289-19 {
+            position: absolute; 
+            height: 126px; 
+            width: 571px; 
+            top: 10px; 
+            left: 10px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271188-18 {
+            position: absolute; 
+            height: 126px; 
+            width: 161px; 
+            top: 10px; 
+            left: 630px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284271087-17 {
+            z-index: 10; 
+            position: absolute; 
+            height: 57px; 
+            width: 520px; 
+            left: 1403px; 
+            top: 1080px; 
+            background-color: rgb(27, 214, 255); 
+        }
+        .silex-id-1439284270986-16 {
+            height: 67px; 
+            width: 611px; 
+            position: absolute; 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284270885-15 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 0px; 
+            background-size: auto; 
+        }
+        .silex-id-1439284270784-14 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 102px; 
+            background-color: rgba(255, 255, 255, 0.729412); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270683-13 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 204px; 
+            background-color: rgba(255, 255, 255, 0.513726); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270582-12 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 306px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270481-11 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 408px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270380-10 {
+            position: absolute; 
+            height: 57px; 
+            width: 100px; 
+            top: 0px; 
+            left: 510px; 
+            background-color: rgba(255, 255, 255, 0.521569); 
+            background-size: auto; 
+        }
+        .silex-id-1439284270279-9 {
+            position: absolute; 
+            height: 101px; 
+            width: 149px; 
+            top: -24px; 
+            left: 47px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284270178-8 {
+            position: absolute; 
+            height: 367px; 
+            width: 100px; 
+            top: 2360px; 
+            left: 195px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284270077-7 {
+            position: absolute; 
+            height: 233px; 
+            width: 721px; 
+            top: 22px; 
+            left: 16px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269976-6 {
+            position: absolute; 
+            height: 30px; 
+            width: 130px; 
+            top: 195px; 
+            left: 584px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284269875-5 {
+            position: absolute; 
+            height: 273px; 
+            width: 100px; 
+            top: 4500px; 
+            left: 115px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269774-4 {
+            position: absolute; 
+            height: 233px; 
+            width: 721px; 
+            top: 22px; 
+            left: 16px; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269673-3 {
+            position: absolute; 
+            height: 30px; 
+            width: 130px; 
+            top: 195px; 
+            left: 584px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1439284269571-2 {
+            height: 330px; 
+            width: 800px; 
+            top: 2.3%; 
+            left: 195px; 
+            position: absolute; 
+            background-color: transparent; 
+            background-size: auto; 
+        }
+        .silex-id-1439284269470-1 {
+            z-index: 300; 
+            position: absolute; 
+            height: 192px; 
+            top: 43px; 
+            width: 760px; 
+            left: 20px; 
+            border-top-color: rgb(255, 255, 255); 
+            border-right-color: rgb(255, 255, 255); 
+            border-bottom-color: rgb(255, 255, 255); 
+            border-left-color: rgb(255, 255, 255); 
+            border-image-source: none; 
+            background-color: transparent; 
+        }
+        .silex-id-1439284269356-0 {
+            line-height: 1em; 
+            position: absolute; 
+            height: 49px; 
+            width: 204px; 
+            top: 236px; 
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            border-bottom-left-radius: 10px; 
+            left: 304px; 
+            background-color: rgb(103, 208, 176); 
+            background-size: auto; 
+        }
+    
